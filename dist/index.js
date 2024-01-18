@@ -34,3 +34,20 @@ let person = {
 };
 //person.name = true //TS still knows which type it should be based on what was assigned initially
 const score = person.score; //Infered and will know that score is of type number.
+/*FUNCTIONS*/
+function addTwoNumbers(a, b) {
+    return a + b;
+}
+const subtractTwoNumbers = (a, b) => {
+    return a - b;
+};
+function addAllNumbers(items) {
+    const total = items.reduce((a, c) => a + c, 0);
+    console.log(total);
+}
+addAllNumbers([5, 7, 9, 11, 3, 2, 1]);
+/*RETURN TYPE INFERENCE*/
+function formatGreeting(name, greetings) {
+    return `${greetings}, ${name}`;
+}
+const result = formatGreeting('Mario', 'Hello'); //TS infered what valuetype is beeing return
