@@ -32,3 +32,5 @@ let person = {
     name: 'luigi',
     score: 35
 };
+//person.name = true //TS still knows which type it should be based on what was assigned initially
+const score = person.score; //Infered and will know that score is of type number.
