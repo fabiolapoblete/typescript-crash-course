@@ -51,3 +51,22 @@ function formatGreeting(name, greetings) {
     return `${greetings}, ${name}`;
 }
 const result = formatGreeting('Mario', 'Hello'); //TS infered what valuetype is beeing return
+/*ANY TYPE*/
+let age; //This variable can be any type
+age = 30;
+age = true;
+let title;
+title = 30;
+title = {
+    hello: "world"
+};
+/*ANY TYPE IN ARRAYS*/
+let stuff = ['hello', true, 30]; //any type could be inside the array.
+stuff.push({ id: 123 });
+/*FUNCTIONS AND ANY*/
+function addTogether(value) {
+    return value + value;
+}
+const result1 = addTogether('hello');
+const result2 = addTogether(3);
+//Any can be useful when migrating from js to ts because using any won't cause error initially.
